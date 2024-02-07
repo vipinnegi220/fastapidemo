@@ -1,11 +1,12 @@
 from database import Base
-from sqlalchemy import Coulumn, Integer, Boolean ,Float,String
+from sqlalchemy import Column, Integer, Boolean, Float, String
 
-class transaction(Base):
-    __tablename__= 'transaction'
+class Transaction(Base):
+    __tablename__ = 'transactions'
 
-    id = Coulumn(Integer,primary_key=True,index=True)
-    account = Coulumn(Float)
-    category = Coulumn(String)
-    description = Coulumn(Boolean)
-    data= Coulumn(String)
+    id = Column(Integer, primary_key=True, index=True)
+    amount = Column(Float)
+    category = Column(String)
+    description = Column(String)
+    is_income = Column(Boolean)
+    date = Column(String)
